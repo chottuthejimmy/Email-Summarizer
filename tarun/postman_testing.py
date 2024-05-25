@@ -1,7 +1,7 @@
 import requests
 
 # Define the API endpoint
-url = 'http://localhost:11434/api/generate'
+url = 'http://localhost:11434/api/generate' # Local API endpoint
 
 # Define the data to be sent in the POST request
 data = {
