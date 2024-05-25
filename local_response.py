@@ -16,8 +16,18 @@ def get_local_response(prompt, model=None, stream=False) -> str:
     "model": model,
     "prompt":
     f"""
-    {prompt}
-    Summarize this in a couple of sentences, keep it short and sweet.
+    Summarize the following email content, ensuring the output is in Markdown format. The summary should capture all key points, include any important emojis present in the original message, and preserve important hyperlinks. Follow Markdown syntax for appropriate formatting such as headings, bullet points, and links to make the summary clear and structured.
+    Take you time and ensure the summary is concise but comprehensive. Focus on capturing the main ideas and essential information. Avoid including redundant or non-essential details. The goal is to create a summary that provides all necessary information in a brief and clear manner.
+    DO NOT TAKE MORE THAN 5 LINES TO SUMMARIZE THE EMAIL.
+    Do not include anything like "Here is a summary of the email content in Markdown format:" or "The summary is as follows:".
+    Just the direct summary of the email content.
+---
+
+{prompt}
+
+---
+
+
     """,
     "stream": stream,
     }
