@@ -3,7 +3,6 @@ from unread import unread_emails
 
 def main():
     prompt = unread_emails(1)
-    print(prompt)
     response = get_local_response(prompt)
     print(response)
     
